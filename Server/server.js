@@ -1,7 +1,6 @@
 const oktaWrapper = require('./js/api.js');
 const express = require('express');
 const path = require("path");
-const open = require('open');
 const app = express();
 const port = 28550;
 
@@ -39,7 +38,4 @@ function verifyToken(req, res, next) {
   }
 }
 
-app.listen(port, () => {
-  console.log(`Server app listening at http://localhost:${port}`);
-  open(`http://localhost:${port}`);
-});
+app.listen(port, () => console.log(`Server app listening at http://localhost:${port}`));
