@@ -1,6 +1,5 @@
 // restore previous data from the server
 $(document).ready(() => data.restore());
-setChildrenProperties();
 
 function setChildrenProperties() {
   // Create a "close" button and append it to each list item
