@@ -40,7 +40,7 @@ function restore(res) {
 exports.checkData = (req, res, type) => {
     oktaJwtVerifier.verifyAccessToken(req.token, 'api://default')
         .then(jwt => {
-            uniqueIdentifier = jwt.claims.sub;
+            uniqueIdentifier = jwt.claims.uid;
             type == 'restore' ? restore(res) : save(req);
         })
         .catch(err => console.error('token failed validation: ', err));
