@@ -34,7 +34,7 @@ oktaSignIn = new OktaSignIn({
 });
 
 oktaSignIn.authClient.token.getUserInfo().then(function (user) {
-  document.getElementById("messageBox").innerHTML = "Hello, " + user.email + ", you are *still* logged in! :)";
+  document.getElementById("messageBox").innerHTML = `Hello ${user.email}, you are *still* logged in! :)`;
   document.getElementById("logout").style.display = 'block';
 }, function (error) {
   oktaSignIn.showSignInToGetTokens({
@@ -44,7 +44,7 @@ oktaSignIn.authClient.token.getUserInfo().then(function (user) {
     oktaSignIn.remove();
 
     const idToken = tokens.idToken;
-    document.getElementById("messageBox").innerHTML = "Hello, " + idToken.claims.email + ", you just logged in! :)";
+    document.getElementById("messageBox").innerHTML = `Hello ${idToken.claims.email}, you just logged in! :)`;
     document.getElementById("logout").style.display = 'block';
   }).catch(function (err) {
     console.error(err);
