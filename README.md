@@ -10,7 +10,7 @@
 
 ## Installation
 
- You need [NodeJS](https://nodejs.org/en/) and the following packages:
+1. You need [NodeJS](https://nodejs.org/en/) and the following packages:
 
 Dependencies | 
 --- |
@@ -19,9 +19,10 @@ Dependencies |
 |npm install cors|
 |npm install node-storage|
 |npm install simple-encryptor --save|
-If you are on Windows, you can run npm/install.bat to install those dependencies. 
 
-Start the server using the `start node %~dp0server.js` command and verify the deployment by navigating to your server address in your preferred browser:
+If you are on Windows, you can run `npm/install.bat` to install those dependencies. 
+
+2. Start the server using the `start node %~dp0server.js` command and verify the deployment by navigating to your server address in your preferred browser:
 
 ```sh
 http://localhost:28550
