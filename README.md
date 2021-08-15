@@ -30,16 +30,16 @@ http://localhost:28550
 
 ## Specifications
 
-● The ‘To do App’ is a Single Page Application in vanilla Javascript
-● Server side protected Rest APIs to save and restore the ‘user edited To do list’
-● User authenticates through Okta’s Sign-in Widget
-● Secure REST APIs using Okta’s JWT Verifier. 
-● The server side API is protected via Access/Bearer token
+- The ‘To do App’ is a Single Page Application in vanilla Javascript
+- Server side protected Rest APIs to save and restore the ‘user edited To do list’
+- User authenticates through Okta’s Sign-in Widget
+- Secure REST APIs using Okta’s JWT Verifier. 
+- The server side API is protected via Access/Bearer token
 
 Login workflow|
 --- |
 The end user is shown the widget if the user is not logged in|
-Upon logging in, user is shown the homepage with a personalized greeting having the user name|
+Upon logging in, the user is shown the homepage with a personalized greeting having the user name|
 The end user is able to logout of the application|
 Customized the Sign-in widget to match the theme of the application|
 The web app uses PKCE (Proof Key for Code Exchange) as the OIDC Login flow|
@@ -48,11 +48,11 @@ The end user can send SMS from the widget and verify the SMS|
 
 ## Security and encryption
 
-● base64 encoding of the to do list before encryption so the data is obfuscated
-● encryption of the to do list items using secretID as key and RSA-256 strong algorithm
-● The encryptor uses the specified secret Id to derive a key via computing it's SHA-256 hash
-● Encryption is done on AES-256 with a unique IV (intialization vector) per call that is returned as part of the result
-● Single database Storage per user ID which is only known by Okta and the user himself
+- Base64 encoding of the to do list before encryption so the data is obfuscated
+- Encryption of the to do list items using secretID as key and RSA-256 strong algorithm
+- The encryptor uses the specified secret Id to derive a key via computing it's SHA-256 hash
+- Encryption is done on AES-256 with a unique IV (intialization vector) per call that is returned as part of the result
+- Single database Storage per user ID which is only known by Okta and the user himself
 
 We are more than ever concerned about the safety of personal data. Strong encryption an security is mandatory to guarantee the relaibility of the saved details even in case of a data leak. An attacker can get a hold on a database but it is no use if the data is not readable.
 
