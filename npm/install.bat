@@ -1,7 +1,7 @@
-cd %~dp0
-start npm install express --save
-start npm install @okta/jwt-verifier
-start npm install cors
-start npm install node-storage
-start npm install simple-encryptor --save
+cd %~dp0..
+call npm install express
+call npm install @okta/jwt-verifier
+call npm install cors
+call npm install node-storage
+call npm install simple-encryptor
 pause
