@@ -25,7 +25,7 @@ oktaSignIn = new OktaSignIn({
   features: {
     registration: true,                 // Enable self-service registration flow
     rememberMe: true,                   // Setting to false will remove the checkbox to save username
-    //multiOptionalFactorEnroll: true,  // Allow users to enroll in multiple optional factors before finishing the authentication flow.
+    multiOptionalFactorEnroll: true,  // Allow users to enroll in multiple optional factors before finishing the authentication flow.
     //selfServiceUnlock: true,          // Will enable unlock in addition to forgotten password
     smsRecovery: true,                // Enable SMS-based account recovery
     //callRecovery: true,               // Enable voice call-based account recovery
@@ -53,7 +53,7 @@ oktaSignIn.authClient.token.getUserInfo().then(function (user) {
 
 function logout() {
   oktaSignIn.authClient.signOut();
-  location.reload();
+  window.location.href = location.origin; 
 }
 
 oktaSignIn.authClient.authStateManager.subscribe(authState => {

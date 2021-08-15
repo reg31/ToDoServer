@@ -18,8 +18,15 @@ app.get('/js/todolist.js', (req, res) => provide(res, 'js/todolist.js'));
 app.get('/img/okta.png', (req, res) => provide(res, 'img/okta.png'));
 app.get('favicon.ico', (req, res) => provide(res, 'img/okta.ico'));
 
+//api redirects
 app.get('/data/save', verifyToken, (req, res) => oktaWrapper.checkData(req, res, 'save'));
 app.get('/data/restore', verifyToken, (req, res) => oktaWrapper.checkData(req, res, 'restore'));
+
+//MFA redirects
+const MFAPrefix = '/signin/verify/okta';
+app.get(`${MFAPrefix}/js/callMessage.js`, (req, res) => provide(res, 'js/callMessage.js'));
+app.get(`${MFAPrefix}/css/todolist.css`, (req, res) => provide(res, 'css/todolist.css'));;
+app.get(`${MFAPrefix}/js/todolist.js`, (req, res) => provide(res, 'js/todolist.js'));
 
 function provide(res, file) {
   res.sendFile(path.join(__dirname, file));
