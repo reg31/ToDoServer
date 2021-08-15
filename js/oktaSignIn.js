@@ -29,12 +29,14 @@ oktaSignIn = new OktaSignIn({
     //selfServiceUnlock: true,          // Will enable unlock in addition to forgotten password
     smsRecovery: true,                // Enable SMS-based account recovery
     //callRecovery: true,               // Enable voice call-based account recovery
-    router: true                    // Leave this set to true for the API demo
+    router: false,                    // Leave this set to true for the API demo
+	showPasswordToggleOnSignInPage:true, // Allow end users to check their password before they click Sign In
+	registration:true                 // Display the registration section in the primary auth page
   }
 });
 
 oktaSignIn.authClient.token.getUserInfo().then(function (user) {
-  document.getElementById("messageBox").innerHTML = "Hello, " + user.email + ", you are *still* logged in! :)";
+  document.getElementById("messageBox").innerHTML = `Hello ${user.email}, you are *still* logged in! :)`;
   document.getElementById("logout").style.display = 'block';
 }, function (error) {
   oktaSignIn.showSignInToGetTokens({
@@ -44,7 +46,7 @@ oktaSignIn.authClient.token.getUserInfo().then(function (user) {
     oktaSignIn.remove();
 
     const idToken = tokens.idToken;
-    document.getElementById("messageBox").innerHTML = "Hello, " + idToken.claims.email + ", you just logged in! :)";
+    document.getElementById("messageBox").innerHTML = `Hello ${idToken.claims.email}, you just logged in! :)`;
     document.getElementById("logout").style.display = 'block';
   }).catch(function (err) {
     console.error(err);
