@@ -29,7 +29,9 @@ oktaSignIn = new OktaSignIn({
     //selfServiceUnlock: true,          // Will enable unlock in addition to forgotten password
     smsRecovery: true,                // Enable SMS-based account recovery
     //callRecovery: true,               // Enable voice call-based account recovery
-    router: true                    // Leave this set to true for the API demo
+    router: false,                    // Leave this set to true for the API demo
+	showPasswordToggleOnSignInPage:true, // Allow end users to check their password before they click Sign In
+	registration:true                 // Display the registration section in the primary auth page
   }
 });
 
