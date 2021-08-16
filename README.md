@@ -65,6 +65,7 @@ We are more than ever concerned about the safety of personal data. Strong encryp
 The To Do List app uses a number of open source projects to work properly:
 - [node.js](https://nodejs.org/en/) - evented I/O for the backend
 - [Express](https://expressjs.com/) - back end web application framework for Node.js
+- [Okta Sign-In Widget](https://github.com/okta/okta-signin-widget) - Javascript widget that provides a fully featured and customizable login experience 
 - [@okta/jwt-verifier](https://github.com/okta/okta-oidc-js/tree/master/packages/jwt-verifier) - This library verifies Okta access and ID tokens
 - [cors](https://github.com/expressjs/cors) -  Connect/Express middleware that can be used to enable CORS
 - [node-storage](https://github.com/amativos/node-storage) - Simple file based store for node.js
