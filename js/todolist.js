@@ -1,5 +1,12 @@
-// restore previous data from the server
+// Restore previous data from the server
 $(document).ready(() => data.restore());
+
+// Allow insertion using enter key
+$(myInput).keypress(function(event){
+	if(event.keyCode == '13'){
+		newElement();
+	}
+});
 
 function setChildrenProperties() {
   // Create a "close" button and append it to each list item
