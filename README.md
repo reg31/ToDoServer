@@ -35,7 +35,7 @@ http://localhost:28550
 - The ‘To do App’ is a Single Page Application in vanilla Javascript
 - Server side protected Rest APIs to save and restore the ‘user edited To do list’
 - User authenticates through Okta’s Sign-in Widget
-- Secure REST APIs using Okta’s JWT Verifier. 
+- Secure REST APIs using Okta’s JWT Verifier
 - The server side API is protected via Access/Bearer token
 
 Login workflow|
