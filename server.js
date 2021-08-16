@@ -18,7 +18,7 @@ app.get('/js/todolist.js', (req, res) => provide(res, 'js/todolist.js'));
 app.get('/img/okta.png', (req, res) => provide(res, 'img/okta.png'));
 app.get('favicon.ico', (req, res) => provide(res, 'img/okta.ico'));
 
-// Rest API redirects
+// REST API redirects
 app.get('/data/save', verifyToken, (req, res) => oktaWrapper.checkData(req, res, 'save'));
 app.get('/data/restore', verifyToken, (req, res) => oktaWrapper.checkData(req, res, 'restore'));
 
