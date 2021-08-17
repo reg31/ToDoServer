@@ -32,12 +32,15 @@ function setChildrenProperties() {
 
   // Add a "checked" symbol when clicking on a list item
   var list = document.querySelector('ul');
-  list.addEventListener('click', function (ev) {
-    if (ev.target.tagName === 'LI') {
-      ev.target.classList.toggle('checked');
-      data.save();
-    }
-  }, false);
+  if (list.getAttribute('listener') !== 'true') {
+    list.setAttribute('listener', 'true');
+    list.addEventListener('click', function (ev) {
+      if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('checked');
+        data.save();
+      }
+    }, false);
+  }
 }
 
 // Create a new list item when clicking on the "Add" button
@@ -59,15 +62,5 @@ function newElement() {
   span.appendChild(txt);
   li.appendChild(span);
   setChildrenProperties();
-
-  let close = document.getElementsByClassName("close");
-
-  for (obj of close) {
-    obj.onclick = function () {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-
   data.save();
 }
