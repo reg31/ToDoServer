@@ -43,9 +43,10 @@ class Data {
   }
 
   static onResponse(elements) {
-    $(myUL).empty();
 
     if (elements) {
+      $(myUL).empty();
+      
       for (let element of elements) {
         $(myUL).append(Base64.decode(element));
       }
