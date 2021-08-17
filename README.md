@@ -66,10 +66,11 @@ The To Do List app uses a number of open source projects to work properly:
 - [node.js](https://nodejs.org/en/) - evented I/O for the backend
 - [Express](https://expressjs.com/) - back end web application framework for Node.js
 - [Okta Sign-In Widget](https://github.com/okta/okta-signin-widget) - Javascript widget that provides a fully featured and customizable login experience 
-- [@okta/jwt-verifier](https://github.com/okta/okta-oidc-js/tree/master/packages/jwt-verifier) - This library verifies Okta access and ID tokens
+- [@okta/jwt-verifier](https://github.com/okta/okta-oidc-js/tree/master/packages/jwt-verifier) - this library verifies Okta access and ID tokens
 - [cors](https://github.com/expressjs/cors) -  Connect/Express middleware that can be used to enable CORS
-- [node-storage](https://github.com/amativos/node-storage) - Simple file based store for node.js
-- [simple-encryptor](https://github.com/sehrope/node-simple-encryptor) - A simple encryptor/decryptor for Node.js
+- [node-storage](https://github.com/amativos/node-storage) - simple file based store for node.js
+- [simple-encryptor](https://github.com/sehrope/node-simple-encryptor) - simple encryptor/decryptor for Node.js
+- [js-base64](https://github.com/dankogai/js-base64) - Base64 transcoder
 - [jQuery](https://jquery.com/) - DOM Traversal and Manipulation library
 
 And of course this project is open source with a [public repository][git-repo-url] on GitHub.
