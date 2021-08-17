@@ -70,8 +70,8 @@ The To Do List app uses a number of open source projects to work properly:
 - [cors](https://github.com/expressjs/cors) -  Connect/Express middleware that can be used to enable CORS
 - [node-storage](https://github.com/amativos/node-storage) - simple file based store for node.js
 - [simple-encryptor](https://github.com/sehrope/node-simple-encryptor) - simple encryptor/decryptor for Node.js
-- [js-base64](https://github.com/dankogai/js-base64) - Base64 transcoder
 - [jQuery](https://jquery.com/) - DOM Traversal and Manipulation library
+- [js-base64](https://github.com/dankogai/js-base64) - Base64 transcoder
 
 And of course this project is open source with a [public repository][git-repo-url] on GitHub.
 
