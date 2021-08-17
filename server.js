@@ -1,10 +1,11 @@
 const oktaWrapper = require('./js/api.js');
 const express = require('express');
 const path = require("path");
+var cors = require('cors');
 const app = express();
 const port = 28550;
 
-var cors = require('cors');
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 // provide files on demand
@@ -19,7 +20,7 @@ app.get('/img/okta.png', (req, res) => provide(res, 'img/okta.png'));
 app.get('favicon.ico', (req, res) => provide(res, 'img/okta.ico'));
 
 // REST API redirects
-app.get('/data/save', verifyToken, (req, res) => oktaWrapper.checkData(req, res, 'save'));
+app.post('/data/save', verifyToken, (req, res) => oktaWrapper.checkData(req, res, 'save'));
 app.get('/data/restore', verifyToken, (req, res) => oktaWrapper.checkData(req, res, 'restore'));
 
 function provide(res, file) {

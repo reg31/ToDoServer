@@ -18,7 +18,7 @@ let uniqueIdentifier;
 function save(req) {
 
     if (uniqueIdentifier) {
-        let data = req.query;
+        let data = req.body;
         // Encrypt the data
         let cipherData = encryptor.encrypt(data);
         datastore.put(uniqueIdentifier, cipherData);

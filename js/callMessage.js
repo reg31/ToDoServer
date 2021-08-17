@@ -1,6 +1,6 @@
 class Data {
 
-  callMessagesApi(type, parameters) {
+  callMessagesApi(api, parameters) {
 
     const accessToken = oktaSignIn.authClient.getAccessToken();
 
@@ -9,8 +9,9 @@ class Data {
       // Make a request using jQuery
       $.ajax({
         // Your API or resource server:
-        url: `/data/${type}`,
-        data: { info: parameters },
+        type: (api  == 'save')? 'POST' : 'GET',
+        url: `/data/${api}`,
+        data: { info : parameters },
         dataType: 'json',
         headers: {
           Authorization: 'Bearer ' + accessToken
