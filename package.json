@@ -1,4 +1,7 @@
 {
+	"scripts": { 
+		"start": "node server.js"
+	},
   "dependencies": {
     "@okta/jwt-verifier": "^2.3.0",
     "cors": "^2.8.5",
