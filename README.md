@@ -26,7 +26,7 @@ If you are on Windows, you can run `npm/install.bat` to install those dependenci
 B) Start the server by executing `node server.js` in a command prompt and verify the deployment by navigating to your server address in your preferred browser:
 
 ```sh
-http://localhost:28550
+http://localhost:3000
 ```
 > Note: `runapp.bat` launcher script can be used as an alternative to the command line 
 
