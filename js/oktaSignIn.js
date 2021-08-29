@@ -6,7 +6,7 @@ oktaSignIn = new OktaSignIn({
   logoText: 'Just fill this form',
   helpSupportNumber: '(123) 456-7890',
   baseUrl: `https://${oktaDomain}`,
-  redirectUri: `http://localhost:28550/app/client.html`,
+  redirectUri: `http://localhost:3000/app/client.html`,
   clientId: `${clientId}`,
   authParams: {
     issuer: `https://${oktaDomain}/oauth2/default`
