@@ -75,6 +75,12 @@ The To Do List app uses a number of open source projects to work properly:
 
 And of course this project is open source with a [public repository][git-repo-url] on GitHub.
 
+## Try it!!
+
+A deployed live version is available here:
+
+https://to-do-list-reg31.herokuapp.com/
+
 ## License
 MIT
 
