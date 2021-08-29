@@ -3,12 +3,12 @@ const express = require('express');
 const path = require("path");
 var cors = require('cors');
 const app = express();
-const port = 28550;
+const port = 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-// provide files on demand
+// Provide files on demand
 app.get('/', (req, res) => provide(res, 'index.html'));
 app.get('/js/handleErrors.js', (req, res) => provide(res, 'js/handleErrors.js'));
 app.get('/js/callMessage.js', (req, res) => provide(res, 'js/callMessage.js'));
@@ -40,4 +40,5 @@ function verifyToken(req, res, next) {
   }
 }
 
+// Listen for requests
 app.listen(port, () => console.log(`Server app listening at http://localhost:${port}`));
