@@ -3,6 +3,9 @@
 	"scripts": {
 		"start": "node server.js"
 	},
+	 "engines": {
+		"node": "14.x"
+	 },
 	"dependencies": {
 		"@okta/jwt-verifier": "^2.3.0",
 		"cors": "^2.8.5",
