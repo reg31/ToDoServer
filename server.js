@@ -3,7 +3,7 @@ const express = require('express');
 const path = require("path");
 var cors = require('cors');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 28550;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());

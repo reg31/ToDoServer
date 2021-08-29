@@ -26,7 +26,7 @@ If you are on Windows, you can run `npm/install.bat` to install those dependenci
 B) Start the server by executing `node server.js` in a command prompt and verify the deployment by navigating to your server address in your preferred browser:
 
 ```sh
-http://localhost:3000
+http://localhost:28550
 ```
 > Note: `runapp.bat` launcher script can be used as an alternative to the command line 
 
@@ -74,6 +74,12 @@ The To Do List app uses a number of open source projects to work properly:
 - [js-base64](https://github.com/dankogai/js-base64) - Base64 transcoder
 
 And of course this project is open source with a [public repository][git-repo-url] on GitHub.
+
+## Try it!!
+
+A deployed live version is available here:
+
+https://to-do-list-reg31.herokuapp.com/
 
 ## License
 MIT
