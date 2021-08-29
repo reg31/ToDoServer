@@ -3,14 +3,14 @@
 	"scripts": {
 		"start": "node server.js"
 	},
-	 "engines": {
-		"node": "12.x"
-	},
 	"dependencies": {
 		"@okta/jwt-verifier": "^2.3.0",
 		"cors": "^2.8.5",
 		"express": "^4.17.1",
 		"node-storage": "^0.0.9",
 		"simple-encryptor": "^4.0.0"
+	},
+	"engines": {
+		"node": "16.x"
 	}
 }
